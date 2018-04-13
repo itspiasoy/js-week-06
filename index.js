@@ -11,28 +11,28 @@
 
 // Write a function named add that takes
 // two numbers and returns their sum
-function add() {
-  return ''
+function add(x, y) {
+  return x + y
 }
 
 // Write a function named double that takes
 // one number and returns double the number
 // **using the above function add()**
 function double() {
-  return ''
+  return add() * 2
 }
 
 // Write a function named multiply that takes
 // two numbers and returns their product
-function multiply() {
-  return ''
+function multiply(x, y) {
+  return x * y
 }
 
 // Write a function named square that takes one
 // number and returns the square of the number
 // **using the above function multiply()**
 function square() {
-  return ''
+  return multiply() * multiply()
 }
 
 // The expected value of the following function is
@@ -42,9 +42,12 @@ function square() {
 // the order of the statements**)
 function subtractTwo(x) {
   return subtract(x, 2) // leave this the way it is
-  const subtract = (y, z) => y - z // make changes here
-}
 
+  function subtract() {
+    return x - 2
+  }
+  // make changes here
+}
 // CHALLENGE: write your own function and
 // a test for it!
 // Requirements:
@@ -54,10 +57,12 @@ function subtractTwo(x) {
 //   argument(s) and return a number
 // * The function must call at least 2 of
 //   the above functions in its body
+
 // * You should write at least one test
 //   for this function in test/index.test.js
-function myFunction() {
-  return ''
+function myFunction(x) {
+  add(x, 1)
+  return multiply(x, 2)
 }
 
 module.exports = { add, double, multiply, square, subtractTwo, myFunction }

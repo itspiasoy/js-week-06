@@ -66,8 +66,8 @@ test('myFunction calls at least two other functions', () => {
 
 test('myFunction works', () => {
   // pass your argument(s) to myFunction here
-  const result = myFunction()
+  const result = myFunction(4)
   // what should it return?
   // complete the toBe() call below
-  expect(result).toBe()
+  expect(result).toBe(8)
 })
